@@ -10,8 +10,6 @@ for i in range(5):
     raad = input('raad het woord ')
     while len(raad) != 5:
         raad = input('raad het woord ')
-
-
     teller = 0
     word = ""
     while True:
@@ -20,7 +18,9 @@ for i in range(5):
             print(element)
             if raad == string:
                 print('goedzo')
+                word += colored((raad),"green")
                 break
+                
 
             if raad[teller] == element:
                 word += colored((raad[teller]),"green")
@@ -37,9 +37,7 @@ for i in range(5):
                 word += colored((raad[teller]),"red")
                 teller+=1
                 continue
-            if raad == string:
-                print('goedzo')
-                break
+
             
         print(word)
         break
